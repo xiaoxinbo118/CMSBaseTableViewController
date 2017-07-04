@@ -11,6 +11,7 @@
 		2782E8151F06005D003B8184 /* CMNBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E8141F06005D003B8184 /* CMNBaseTableViewController.swift */; };
 		2782E8181F060272003B8184 /* CMNBaseCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E8171F060272003B8184 /* CMNBaseCellItem.swift */; };
 		2782E81C1F063189003B8184 /* CMNBaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E81B1F063189003B8184 /* CMNBaseTableCell.swift */; };
+		2782E8321F0A2FF8003B8184 /* CMNTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E8311F0A2FF8003B8184 /* CMNTextFieldCell.swift */; };
 		27A19A701F03BBDC000595D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19A6F1F03BBDC000595D6 /* AppDelegate.swift */; };
 		27A19A721F03BBDC000595D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19A711F03BBDC000595D6 /* ViewController.swift */; };
 		27A19A751F03BBDC000595D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A19A731F03BBDC000595D6 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		2782E8141F06005D003B8184 /* CMNBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNBaseTableViewController.swift; path = Second/CMNBaseTableViewController.swift; sourceTree = "<group>"; };
 		2782E8171F060272003B8184 /* CMNBaseCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNBaseCellItem.swift; path = Second/TableViewCell/CMNBaseCellItem.swift; sourceTree = "<group>"; };
 		2782E81B1F063189003B8184 /* CMNBaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNBaseTableCell.swift; path = Second/TableViewCell/CMNBaseTableCell.swift; sourceTree = "<group>"; };
+		2782E8311F0A2FF8003B8184 /* CMNTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNTextFieldCell.swift; path = Second/TableViewCell/CMNTextFieldCell.swift; sourceTree = "<group>"; };
 		27A19A6C1F03BBDC000595D6 /* NewsPager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsPager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A19A6F1F03BBDC000595D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A19A711F03BBDC000595D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				2782E8171F060272003B8184 /* CMNBaseCellItem.swift */,
 				2782E81B1F063189003B8184 /* CMNBaseTableCell.swift */,
+				2782E8311F0A2FF8003B8184 /* CMNTextFieldCell.swift */,
 			);
 			name = TableViewCell;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				27A19A721F03BBDC000595D6 /* ViewController.swift in Sources */,
 				2782E81C1F063189003B8184 /* CMNBaseTableCell.swift in Sources */,
 				2782E8181F060272003B8184 /* CMNBaseCellItem.swift in Sources */,
+				2782E8321F0A2FF8003B8184 /* CMNTextFieldCell.swift in Sources */,
 				27A19A701F03BBDC000595D6 /* AppDelegate.swift in Sources */,
 				2782E8151F06005D003B8184 /* CMNBaseTableViewController.swift in Sources */,
 			);

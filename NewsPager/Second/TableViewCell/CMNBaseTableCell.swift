@@ -18,14 +18,27 @@ class CMNBaseTableCell: UITableViewCell {
     override required init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier);
         
+        self.initCellUI();
+        
         data
             .asObservable()
             .bind(to: self.rx.cellItem)
             .addDisposableTo(disposeBag);
     }
     
-    func updateItem(_ item: CMNBaseCellItem?) -> Void {
-        textLabel?.text = "111";
+    func initCellUI() -> Void {
+       
+    }
+    
+    func _updateItem(_ item: CMNBaseCellItem!) -> Void {
+        // 防止第一次的空对象
+        if (!item.isMember(of: CMNBaseCellItem.classForCoder())) {
+            self.updateItem(item);
+        }
+    }
+    
+    func updateItem(_ item: CMNBaseCellItem!) -> Void {
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,7 +64,7 @@ extension Reactive where Base: CMNBaseTableCell
 {
     internal var cellItem : UIBindingObserver<Base, CMNBaseCellItem?> {
         return UIBindingObserver(UIElement: self.base) { cell, item in
-            cell.updateItem(item);
+            cell._updateItem(item);
         };
     }
 }
