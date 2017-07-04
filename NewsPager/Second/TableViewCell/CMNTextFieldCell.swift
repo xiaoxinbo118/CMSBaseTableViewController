@@ -21,6 +21,8 @@ class CMNTextFieldCellItem: CMNBaseCellItem {
 
 class CMNTextFieldCell: CMNBaseTableCell {
     let textField: UITextField = UITextField();
+    var objectToTextDispose: Disposable? = nil;
+    var textToObjectDispose: Disposable? = nil;
     
     override func initCellUI() -> Void {
         self.addSubview(textField);
@@ -29,28 +31,20 @@ class CMNTextFieldCell: CMNBaseTableCell {
     
     override func updateItem(_ item: CMNBaseCellItem?) {
         let object:CMNTextFieldCellItem = item as! CMNTextFieldCellItem;
-
-        object.text
+        
+        objectToTextDispose?.dispose();
+        
+        objectToTextDispose = object.text
             .asObservable()
-            .bind(to: textField.rx.text)
-            .addDisposableTo(self.disposeBag);
-//        textField.rx.text.subscribe(<#T##observer: ObserverType##ObserverType#>)
-//        textField.rx.text.bind(to: object.text)
-//            .addDisposableTo(self.disposeBag);
-        
-//        textField.rx.text.bind(to: object.text.asObservable()).addDisposableTo(self.disposeBag);
-        
-//        let text = Variable("双向绑定")
-//        
-//        _  = textField.rx.textInput <-> text
-//        textField
-//        textField.rx.text
-//            .asObservable()
-//            .subscribe{
-//                print("textfield: \($0)")
-//            }
-//            .disposed(by: disposeBag)
+            .bind(to: textField.rx.text);
+        objectToTextDispose?.addDisposableTo(disposeBag);
 
+        
+        textToObjectDispose?.dispose();
+        textToObjectDispose = textField.rx.text
+            .orEmpty
+            .bind(to: object.text);
+        textToObjectDispose?.addDisposableTo(disposeBag);
     }
     
     override func layoutSubviews() {
