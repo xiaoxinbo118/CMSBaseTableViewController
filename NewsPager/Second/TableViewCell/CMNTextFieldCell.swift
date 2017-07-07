@@ -33,12 +33,10 @@ class CMNTextFieldCell: CMNBaseTableCell {
         let object:CMNTextFieldCellItem = item as! CMNTextFieldCellItem;
         
         objectToTextDispose?.dispose();
-        
         objectToTextDispose = object.text
             .asObservable()
             .bind(to: textField.rx.text);
         objectToTextDispose?.addDisposableTo(disposeBag);
-
         
         textToObjectDispose?.dispose();
         textToObjectDispose = textField.rx.text

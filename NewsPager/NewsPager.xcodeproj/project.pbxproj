@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2782E8131F060038003B8184 /* CMNBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E8121F060038003B8184 /* CMNBaseViewController.swift */; };
-		2782E8151F06005D003B8184 /* CMNBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E8141F06005D003B8184 /* CMNBaseTableViewController.swift */; };
 		2782E8181F060272003B8184 /* CMNBaseCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E8171F060272003B8184 /* CMNBaseCellItem.swift */; };
 		2782E81C1F063189003B8184 /* CMNBaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E81B1F063189003B8184 /* CMNBaseTableCell.swift */; };
 		2782E8321F0A2FF8003B8184 /* CMNTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E8311F0A2FF8003B8184 /* CMNTextFieldCell.swift */; };
+		279DBC331F0B876100D37E60 /* CMNBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC311F0B876100D37E60 /* CMNBaseTableViewController.swift */; };
+		279DBC341F0B876100D37E60 /* CMNBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC321F0B876100D37E60 /* CMNBaseViewController.swift */; };
+		279DBC371F0B87B500D37E60 /* CMNBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC361F0B87B500D37E60 /* CMNBaseRequest.swift */; };
+		279DBC391F0B87C400D37E60 /* CMNBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC381F0B87C400D37E60 /* CMNBaseResponse.swift */; };
+		279DBC3D1F0B9E5700D37E60 /* APIUserLoginRquest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC3C1F0B9E5700D37E60 /* APIUserLoginRquest.swift */; };
+		279DBC3F1F0B9ED500D37E60 /* APIUserLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC3E1F0B9ED500D37E60 /* APIUserLoginResponse.swift */; };
+		279DBC411F0CC14200D37E60 /* CMNNetworkAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC401F0CC14200D37E60 /* CMNNetworkAccessor.swift */; };
+		279DBC451F0CD3FE00D37E60 /* CMNBaseBiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC441F0CD3FE00D37E60 /* CMNBaseBiz.swift */; };
+		279DBC471F0CD42600D37E60 /* CMNUserBiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC461F0CD42600D37E60 /* CMNUserBiz.swift */; };
+		279DBC491F0CF5B300D37E60 /* CMNAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC481F0CF5B300D37E60 /* CMNAPITarget.swift */; };
+		279DBC4C1F0D035300D37E60 /* RxMoyaProvider+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC4B1F0D035300D37E60 /* RxMoyaProvider+EXT.swift */; };
+		279DBC4E1F0DD50D00D37E60 /* CMNBaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC4D1F0DD50D00D37E60 /* CMNBaseEntity.swift */; };
+		279DBC501F0DD54C00D37E60 /* CMNUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC4F1F0DD54C00D37E60 /* CMNUserEntity.swift */; };
 		27A19A701F03BBDC000595D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19A6F1F03BBDC000595D6 /* AppDelegate.swift */; };
 		27A19A721F03BBDC000595D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19A711F03BBDC000595D6 /* ViewController.swift */; };
 		27A19A751F03BBDC000595D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A19A731F03BBDC000595D6 /* Main.storyboard */; };
@@ -40,11 +51,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2782E8121F060038003B8184 /* CMNBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNBaseViewController.swift; path = Second/CMNBaseViewController.swift; sourceTree = "<group>"; };
-		2782E8141F06005D003B8184 /* CMNBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNBaseTableViewController.swift; path = Second/CMNBaseTableViewController.swift; sourceTree = "<group>"; };
 		2782E8171F060272003B8184 /* CMNBaseCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNBaseCellItem.swift; path = Second/TableViewCell/CMNBaseCellItem.swift; sourceTree = "<group>"; };
 		2782E81B1F063189003B8184 /* CMNBaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNBaseTableCell.swift; path = Second/TableViewCell/CMNBaseTableCell.swift; sourceTree = "<group>"; };
 		2782E8311F0A2FF8003B8184 /* CMNTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNTextFieldCell.swift; path = Second/TableViewCell/CMNTextFieldCell.swift; sourceTree = "<group>"; };
+		279DBC311F0B876100D37E60 /* CMNBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNBaseTableViewController.swift; sourceTree = "<group>"; };
+		279DBC321F0B876100D37E60 /* CMNBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNBaseViewController.swift; sourceTree = "<group>"; };
+		279DBC361F0B87B500D37E60 /* CMNBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNBaseRequest.swift; sourceTree = "<group>"; };
+		279DBC381F0B87C400D37E60 /* CMNBaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNBaseResponse.swift; sourceTree = "<group>"; };
+		279DBC3C1F0B9E5700D37E60 /* APIUserLoginRquest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUserLoginRquest.swift; sourceTree = "<group>"; };
+		279DBC3E1F0B9ED500D37E60 /* APIUserLoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUserLoginResponse.swift; sourceTree = "<group>"; };
+		279DBC401F0CC14200D37E60 /* CMNNetworkAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNNetworkAccessor.swift; sourceTree = "<group>"; };
+		279DBC441F0CD3FE00D37E60 /* CMNBaseBiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNBaseBiz.swift; sourceTree = "<group>"; };
+		279DBC461F0CD42600D37E60 /* CMNUserBiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNUserBiz.swift; sourceTree = "<group>"; };
+		279DBC481F0CF5B300D37E60 /* CMNAPITarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNAPITarget.swift; sourceTree = "<group>"; };
+		279DBC4B1F0D035300D37E60 /* RxMoyaProvider+EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RxMoyaProvider+EXT.swift"; path = "NewsPager/API/RxMoyaProvider+EXT.swift"; sourceTree = "<group>"; };
+		279DBC4D1F0DD50D00D37E60 /* CMNBaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNBaseEntity.swift; path = NewsPager/Entity/CMNBaseEntity.swift; sourceTree = "<group>"; };
+		279DBC4F1F0DD54C00D37E60 /* CMNUserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNUserEntity.swift; path = NewsPager/Entity/CMNUserEntity.swift; sourceTree = "<group>"; };
 		27A19A6C1F03BBDC000595D6 /* NewsPager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsPager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A19A6F1F03BBDC000595D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A19A711F03BBDC000595D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,9 +114,11 @@
 		2782E8081F04AA0C003B8184 /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				279DBC4A1F0D033700D37E60 /* Entity */,
+				279DBC431F0CD3EB00D37E60 /* Business */,
+				279DBC351F0B879B00D37E60 /* API */,
+				279DBC301F0B876100D37E60 /* Controller */,
 				2782E8161F060245003B8184 /* TableViewCell */,
-				2782E8121F060038003B8184 /* CMNBaseViewController.swift */,
-				2782E8141F06005D003B8184 /* CMNBaseTableViewController.swift */,
 			);
 			name = Second;
 			sourceTree = "<group>";
@@ -107,6 +131,50 @@
 				2782E8311F0A2FF8003B8184 /* CMNTextFieldCell.swift */,
 			);
 			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		279DBC301F0B876100D37E60 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				279DBC311F0B876100D37E60 /* CMNBaseTableViewController.swift */,
+				279DBC321F0B876100D37E60 /* CMNBaseViewController.swift */,
+			);
+			name = Controller;
+			path = Second/Controller;
+			sourceTree = "<group>";
+		};
+		279DBC351F0B879B00D37E60 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				279DBC361F0B87B500D37E60 /* CMNBaseRequest.swift */,
+				279DBC381F0B87C400D37E60 /* CMNBaseResponse.swift */,
+				279DBC3C1F0B9E5700D37E60 /* APIUserLoginRquest.swift */,
+				279DBC3E1F0B9ED500D37E60 /* APIUserLoginResponse.swift */,
+				279DBC401F0CC14200D37E60 /* CMNNetworkAccessor.swift */,
+				279DBC481F0CF5B300D37E60 /* CMNAPITarget.swift */,
+			);
+			name = API;
+			path = NewsPager/API;
+			sourceTree = "<group>";
+		};
+		279DBC431F0CD3EB00D37E60 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				279DBC441F0CD3FE00D37E60 /* CMNBaseBiz.swift */,
+				279DBC461F0CD42600D37E60 /* CMNUserBiz.swift */,
+			);
+			name = Business;
+			path = Second/Business;
+			sourceTree = "<group>";
+		};
+		279DBC4A1F0D033700D37E60 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				279DBC4B1F0D035300D37E60 /* RxMoyaProvider+EXT.swift */,
+				279DBC4D1F0DD50D00D37E60 /* CMNBaseEntity.swift */,
+				279DBC4F1F0DD54C00D37E60 /* CMNUserEntity.swift */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 		27A19A631F03BBDC000595D6 = {
@@ -365,13 +433,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2782E8131F060038003B8184 /* CMNBaseViewController.swift in Sources */,
+				279DBC391F0B87C400D37E60 /* CMNBaseResponse.swift in Sources */,
 				27A19A721F03BBDC000595D6 /* ViewController.swift in Sources */,
+				279DBC371F0B87B500D37E60 /* CMNBaseRequest.swift in Sources */,
+				279DBC3F1F0B9ED500D37E60 /* APIUserLoginResponse.swift in Sources */,
+				279DBC501F0DD54C00D37E60 /* CMNUserEntity.swift in Sources */,
+				279DBC3D1F0B9E5700D37E60 /* APIUserLoginRquest.swift in Sources */,
+				279DBC471F0CD42600D37E60 /* CMNUserBiz.swift in Sources */,
 				2782E81C1F063189003B8184 /* CMNBaseTableCell.swift in Sources */,
 				2782E8181F060272003B8184 /* CMNBaseCellItem.swift in Sources */,
+				279DBC411F0CC14200D37E60 /* CMNNetworkAccessor.swift in Sources */,
 				2782E8321F0A2FF8003B8184 /* CMNTextFieldCell.swift in Sources */,
+				279DBC4C1F0D035300D37E60 /* RxMoyaProvider+EXT.swift in Sources */,
+				279DBC331F0B876100D37E60 /* CMNBaseTableViewController.swift in Sources */,
+				279DBC4E1F0DD50D00D37E60 /* CMNBaseEntity.swift in Sources */,
 				27A19A701F03BBDC000595D6 /* AppDelegate.swift in Sources */,
-				2782E8151F06005D003B8184 /* CMNBaseTableViewController.swift in Sources */,
+				279DBC451F0CD3FE00D37E60 /* CMNBaseBiz.swift in Sources */,
+				279DBC341F0B876100D37E60 /* CMNBaseViewController.swift in Sources */,
+				279DBC491F0CF5B300D37E60 /* CMNAPITarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

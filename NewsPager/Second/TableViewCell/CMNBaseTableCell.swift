@@ -26,6 +26,9 @@ class CMNBaseTableCell: UITableViewCell {
             .addDisposableTo(disposeBag);
     }
     
+    /*
+     * 子类初始化UI
+     */
     func initCellUI() -> Void {
        
     }
