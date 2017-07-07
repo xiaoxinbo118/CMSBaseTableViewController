@@ -20,7 +20,7 @@ class CMNAPITarget: NSObject, TargetType {
     
     /// The target's base `URL`.
     var baseURL: URL {
-        return URL.init(string: "https://m.fenqu.com")!
+        return URL.init(string: "https://m.fengqu.com")!
     }
     
     /// The HTTP method used in the request.

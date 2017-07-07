@@ -69,7 +69,7 @@ public struct ServerTrustPolicy : OptionSet {
 
 public protocol CMNBaseRequestType
 {
-    
+    func getMethodName() -> String?;
 }
 
 class CMNBaseRequest: NSObject, CMNBaseRequestType {
@@ -87,5 +87,9 @@ class CMNBaseRequest: NSObject, CMNBaseRequestType {
         
         self.method = method;
         self.securityType = securityType;
+    }
+    
+    func getMethodName() -> String? {
+        return method;
     }
 }

@@ -48,7 +48,7 @@ class ViewController: CMNBaseTableViewController {
             .subscribe(onNext: { (userEntity) in
             
         }, onError: { (error) in
-            
+            NSLog("error: %@", error.localizedDescription);
         }, onCompleted: {
             
         }).addDisposableTo(disposeBag);

@@ -10,41 +10,61 @@ import UIKit
 import Moya
 import RxSwift
 
+protocol CMNRxMoyaProviderDelegate {
+    func tokenExprise(_ requests:[CMNBaseRequestType], _ callback: @escaping (_ result: Bool, _ error: NSError?) -> Void) -> Void;
+}
+
 class CMNRxMoyaProvider: RxMoyaProvider<CMNAPITarget> {
     var deviceId: String?;
     var appId: String?;
     var userId: String?;
+    var delegate: CMNRxMoyaProviderDelegate?;
     
     func request<E, R>(_ request: R, entity: E) -> Observable<CMNBaseEntityType> where E: CMNBaseEntityType, R: CMNBaseRequest {
-        return self.requests([request], entity: entity).map({ (entities) -> CMNBaseEntityType in
+        return self.requests([request], entities: [entity]).map({ (entities) -> CMNBaseEntityType in
             return entities[0];
         });
     }
     
-    func requests<E, R>(_ requests: [R], entity: E) -> Observable<[CMNBaseEntityType]> where E: CMNBaseEntityType, R: CMNBaseRequest  {
-        
-        
+    func requests<E, R>(_ requests: [R], entities: [E]) -> Observable<[CMNBaseEntityType]> where E: CMNBaseEntityType, R: CMNBaseRequest  {
+
         return Observable.create { observer in
             let params = self.renderParameters(requests: requests);
             
-            let cancellableToken = self.request(CMNAPITarget(params)) { result in
-                switch result {
-                case let .success(response):
-//                    observer.onNext(E)
-
-                    observer.onCompleted()
-                case let .failure(error):
-                    observer.onError(error)
+            var cancellableToken: Cancellable?;
+            // 调用前验证token
+            self.delegate?.tokenExprise(requests, { (success, error) in
+                if error == nil {
+                    cancellableToken = self.request(CMNAPITarget(params)) { result in
+                        switch result {
+                        case let .success(response):
+                            //                    observer.onNext(E)
+                            let result = String.init(data: response.data, encoding: .utf8);
+                            NSLog("api result; %@", result!);
+                            
+//                            var json = result.toJSONValue();
+//                             JSONDeserializer<T>.deserializeFrom(json: jsonString)!
+                            let object: NSDictionary = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as! NSDictionary;
+                            
+                            let content: NSArray = object.object(forKey: "content") as! NSArray;
+                            
+                            // todo 返回值解析
+                            
+                            observer.onCompleted()
+                        case let .failure(error):
+                            observer.onError(error)
+                        }
+                    }
+                } else {
+                    observer.onError(error!)
                 }
-            }
+            });
             
             return Disposables.create {
-                cancellableToken.cancel()
+                cancellableToken?.cancel()
             }
         }
     }
-
-
 }
 
 /*

@@ -16,7 +16,6 @@
 		279DBC391F0B87C400D37E60 /* CMNBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC381F0B87C400D37E60 /* CMNBaseResponse.swift */; };
 		279DBC3D1F0B9E5700D37E60 /* APIUserLoginRquest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC3C1F0B9E5700D37E60 /* APIUserLoginRquest.swift */; };
 		279DBC3F1F0B9ED500D37E60 /* APIUserLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC3E1F0B9ED500D37E60 /* APIUserLoginResponse.swift */; };
-		279DBC411F0CC14200D37E60 /* CMNNetworkAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC401F0CC14200D37E60 /* CMNNetworkAccessor.swift */; };
 		279DBC451F0CD3FE00D37E60 /* CMNBaseBiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC441F0CD3FE00D37E60 /* CMNBaseBiz.swift */; };
 		279DBC471F0CD42600D37E60 /* CMNUserBiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC461F0CD42600D37E60 /* CMNUserBiz.swift */; };
 		279DBC491F0CF5B300D37E60 /* CMNAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279DBC481F0CF5B300D37E60 /* CMNAPITarget.swift */; };
@@ -30,6 +29,7 @@
 		27A19A7A1F03BBDC000595D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A19A781F03BBDC000595D6 /* LaunchScreen.storyboard */; };
 		27A19A851F03BBDD000595D6 /* NewsPagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19A841F03BBDD000595D6 /* NewsPagerTests.swift */; };
 		27A19A901F03BBDD000595D6 /* NewsPagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19A8F1F03BBDD000595D6 /* NewsPagerUITests.swift */; };
+		27AD24721F0F796800B66302 /* CMNApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD24711F0F796800B66302 /* CMNApiResponse.swift */; };
 		3707742CADC3EC3648BA3BDA /* Pods_NewsPager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EB55E88FD2F6CC4F1CB94C /* Pods_NewsPager.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,6 @@
 		279DBC381F0B87C400D37E60 /* CMNBaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNBaseResponse.swift; sourceTree = "<group>"; };
 		279DBC3C1F0B9E5700D37E60 /* APIUserLoginRquest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUserLoginRquest.swift; sourceTree = "<group>"; };
 		279DBC3E1F0B9ED500D37E60 /* APIUserLoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUserLoginResponse.swift; sourceTree = "<group>"; };
-		279DBC401F0CC14200D37E60 /* CMNNetworkAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNNetworkAccessor.swift; sourceTree = "<group>"; };
 		279DBC441F0CD3FE00D37E60 /* CMNBaseBiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNBaseBiz.swift; sourceTree = "<group>"; };
 		279DBC461F0CD42600D37E60 /* CMNUserBiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNUserBiz.swift; sourceTree = "<group>"; };
 		279DBC481F0CF5B300D37E60 /* CMNAPITarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNAPITarget.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		27A19A8B1F03BBDD000595D6 /* NewsPagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsPagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A19A8F1F03BBDD000595D6 /* NewsPagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPagerUITests.swift; sourceTree = "<group>"; };
 		27A19A911F03BBDD000595D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27AD24711F0F796800B66302 /* CMNApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNApiResponse.swift; sourceTree = "<group>"; };
 		81EB55E88FD2F6CC4F1CB94C /* Pods_NewsPager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9886F97B094B4A19F7312057 /* Pods-NewsPager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsPager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsPager/Pods-NewsPager.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B9F8E88DAE0CA78E50985F /* Pods-NewsPager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsPager.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsPager/Pods-NewsPager.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 				279DBC381F0B87C400D37E60 /* CMNBaseResponse.swift */,
 				279DBC3C1F0B9E5700D37E60 /* APIUserLoginRquest.swift */,
 				279DBC3E1F0B9ED500D37E60 /* APIUserLoginResponse.swift */,
-				279DBC401F0CC14200D37E60 /* CMNNetworkAccessor.swift */,
 				279DBC481F0CF5B300D37E60 /* CMNAPITarget.swift */,
+				27AD24711F0F796800B66302 /* CMNApiResponse.swift */,
 			);
 			name = API;
 			path = NewsPager/API;
@@ -433,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AD24721F0F796800B66302 /* CMNApiResponse.swift in Sources */,
 				279DBC391F0B87C400D37E60 /* CMNBaseResponse.swift in Sources */,
 				27A19A721F03BBDC000595D6 /* ViewController.swift in Sources */,
 				279DBC371F0B87B500D37E60 /* CMNBaseRequest.swift in Sources */,
@@ -442,7 +443,6 @@
 				279DBC471F0CD42600D37E60 /* CMNUserBiz.swift in Sources */,
 				2782E81C1F063189003B8184 /* CMNBaseTableCell.swift in Sources */,
 				2782E8181F060272003B8184 /* CMNBaseCellItem.swift in Sources */,
-				279DBC411F0CC14200D37E60 /* CMNNetworkAccessor.swift in Sources */,
 				2782E8321F0A2FF8003B8184 /* CMNTextFieldCell.swift in Sources */,
 				279DBC4C1F0D035300D37E60 /* RxMoyaProvider+EXT.swift in Sources */,
 				279DBC331F0B876100D37E60 /* CMNBaseTableViewController.swift in Sources */,
