@@ -25,23 +25,18 @@ class CMNUserBiz: CMNBaseBiz {
         super.init();
     }
     
-    
     func login(account: String, password: String) -> Observable<CMNUserEntity>? {
         let request: APIUserLoginRquest = APIUserLoginRquest(account: account, type: "Tel", password: password);
         // todo 自己要map一下。
         let entity: CMNUserEntity = CMNUserEntity();
         return provider
                 .request(request, entity: entity)
-                .logic({ (entity) -> CMNUserEntity in
+                .map({ (entity) -> CMNUserEntity in
                     // 实体处理
-                    return entity;
+                    return entity as! CMNUserEntity;
                 })
                 .do(onNext: { (entity) in
                     // 业务逻辑
                 });
     }
-    
-//    func login() -> Disposable {
-//        
-//    }
 }

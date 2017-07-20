@@ -69,7 +69,11 @@ public struct ServerTrustPolicy : OptionSet {
 
 public protocol CMNBaseRequestType
 {
+    var ignoreDevice: Bool {get};
+    var ignoreToken: Bool {get};
+    
     func getMethodName() -> String?;
+    
 }
 
 class CMNBaseRequest: NSObject, CMNBaseRequestType {
@@ -80,7 +84,8 @@ class CMNBaseRequest: NSObject, CMNBaseRequestType {
     var securityType: ServerTrustPolicy!;
     var response: CMNBaseResponse?;
     var ignoreError: Bool = false;
-    
+    var ignoreDevice: Bool = false;
+    var ignoreToken: Bool = false;
     
     init(method: String!, securityType: ServerTrustPolicy!) {
         super.init();

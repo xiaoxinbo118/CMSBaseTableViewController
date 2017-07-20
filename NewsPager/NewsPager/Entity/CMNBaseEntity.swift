@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import HandyJSON;
 
 public protocol CMNBaseEntityType
 {
     
 }
 
-open class CMNBaseEntity: NSObject, CMNBaseEntityType {
-    
+open class CMNBaseEntity: NSObject, CMNBaseEntityType, HandyJSON {
+    public override required init() {
+        super.init();
+    }
 }

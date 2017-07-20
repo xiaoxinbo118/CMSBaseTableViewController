@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		274E9F3E1F1CB74F00EF0FCF /* CMNDeviceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E9F3D1F1CB74F00EF0FCF /* CMNDeviceEntity.swift */; };
+		274E9F401F1CB7DE00EF0FCF /* APIUserDeviceRegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E9F3F1F1CB7DE00EF0FCF /* APIUserDeviceRegisterRequest.swift */; };
+		274E9F421F1DF28C00EF0FCF /* CMNTokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E9F411F1DF28C00EF0FCF /* CMNTokenEntity.swift */; };
+		274E9F451F1DF31000EF0FCF /* CMNUserCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E9F441F1DF31000EF0FCF /* CMNUserCacheManager.swift */; };
+		274E9F471F1F4DA100EF0FCF /* APIRenewTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E9F461F1F4DA100EF0FCF /* APIRenewTokenRequest.swift */; };
+		274E9F491F1F5E9E00EF0FCF /* CMNDeviceAndTokenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274E9F481F1F5E9D00EF0FCF /* CMNDeviceAndTokenEntity.swift */; };
 		2782E8181F060272003B8184 /* CMNBaseCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E8171F060272003B8184 /* CMNBaseCellItem.swift */; };
 		2782E81C1F063189003B8184 /* CMNBaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E81B1F063189003B8184 /* CMNBaseTableCell.swift */; };
 		2782E8321F0A2FF8003B8184 /* CMNTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782E8311F0A2FF8003B8184 /* CMNTextFieldCell.swift */; };
@@ -29,7 +35,6 @@
 		27A19A7A1F03BBDC000595D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A19A781F03BBDC000595D6 /* LaunchScreen.storyboard */; };
 		27A19A851F03BBDD000595D6 /* NewsPagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19A841F03BBDD000595D6 /* NewsPagerTests.swift */; };
 		27A19A901F03BBDD000595D6 /* NewsPagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19A8F1F03BBDD000595D6 /* NewsPagerUITests.swift */; };
-		27AD24721F0F796800B66302 /* CMNApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD24711F0F796800B66302 /* CMNApiResponse.swift */; };
 		3707742CADC3EC3648BA3BDA /* Pods_NewsPager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EB55E88FD2F6CC4F1CB94C /* Pods_NewsPager.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		274E9F3D1F1CB74F00EF0FCF /* CMNDeviceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNDeviceEntity.swift; path = NewsPager/Entity/CMNDeviceEntity.swift; sourceTree = "<group>"; };
+		274E9F3F1F1CB7DE00EF0FCF /* APIUserDeviceRegisterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUserDeviceRegisterRequest.swift; sourceTree = "<group>"; };
+		274E9F411F1DF28C00EF0FCF /* CMNTokenEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNTokenEntity.swift; path = NewsPager/Entity/CMNTokenEntity.swift; sourceTree = "<group>"; };
+		274E9F441F1DF31000EF0FCF /* CMNUserCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNUserCacheManager.swift; sourceTree = "<group>"; };
+		274E9F461F1F4DA100EF0FCF /* APIRenewTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRenewTokenRequest.swift; sourceTree = "<group>"; };
+		274E9F481F1F5E9D00EF0FCF /* CMNDeviceAndTokenEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNDeviceAndTokenEntity.swift; path = NewsPager/Entity/CMNDeviceAndTokenEntity.swift; sourceTree = "<group>"; };
 		2782E8171F060272003B8184 /* CMNBaseCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNBaseCellItem.swift; path = Second/TableViewCell/CMNBaseCellItem.swift; sourceTree = "<group>"; };
 		2782E81B1F063189003B8184 /* CMNBaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNBaseTableCell.swift; path = Second/TableViewCell/CMNBaseTableCell.swift; sourceTree = "<group>"; };
 		2782E8311F0A2FF8003B8184 /* CMNTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMNTextFieldCell.swift; path = Second/TableViewCell/CMNTextFieldCell.swift; sourceTree = "<group>"; };
@@ -79,7 +90,6 @@
 		27A19A8B1F03BBDD000595D6 /* NewsPagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsPagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A19A8F1F03BBDD000595D6 /* NewsPagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPagerUITests.swift; sourceTree = "<group>"; };
 		27A19A911F03BBDD000595D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27AD24711F0F796800B66302 /* CMNApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMNApiResponse.swift; sourceTree = "<group>"; };
 		81EB55E88FD2F6CC4F1CB94C /* Pods_NewsPager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9886F97B094B4A19F7312057 /* Pods-NewsPager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsPager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsPager/Pods-NewsPager.debug.xcconfig"; sourceTree = "<group>"; };
 		E5B9F8E88DAE0CA78E50985F /* Pods-NewsPager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsPager.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsPager/Pods-NewsPager.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,9 +121,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		274E9F431F1DF2D100EF0FCF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				274E9F441F1DF31000EF0FCF /* CMNUserCacheManager.swift */,
+			);
+			name = Manager;
+			path = Second/Manager;
+			sourceTree = "<group>";
+		};
 		2782E8081F04AA0C003B8184 /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				274E9F431F1DF2D100EF0FCF /* Manager */,
 				279DBC4A1F0D033700D37E60 /* Entity */,
 				279DBC431F0CD3EB00D37E60 /* Business */,
 				279DBC351F0B879B00D37E60 /* API */,
@@ -151,7 +171,8 @@
 				279DBC3C1F0B9E5700D37E60 /* APIUserLoginRquest.swift */,
 				279DBC3E1F0B9ED500D37E60 /* APIUserLoginResponse.swift */,
 				279DBC481F0CF5B300D37E60 /* CMNAPITarget.swift */,
-				27AD24711F0F796800B66302 /* CMNApiResponse.swift */,
+				274E9F3F1F1CB7DE00EF0FCF /* APIUserDeviceRegisterRequest.swift */,
+				274E9F461F1F4DA100EF0FCF /* APIRenewTokenRequest.swift */,
 			);
 			name = API;
 			path = NewsPager/API;
@@ -173,6 +194,9 @@
 				279DBC4B1F0D035300D37E60 /* RxMoyaProvider+EXT.swift */,
 				279DBC4D1F0DD50D00D37E60 /* CMNBaseEntity.swift */,
 				279DBC4F1F0DD54C00D37E60 /* CMNUserEntity.swift */,
+				274E9F3D1F1CB74F00EF0FCF /* CMNDeviceEntity.swift */,
+				274E9F411F1DF28C00EF0FCF /* CMNTokenEntity.swift */,
+				274E9F481F1F5E9D00EF0FCF /* CMNDeviceAndTokenEntity.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -433,21 +457,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27AD24721F0F796800B66302 /* CMNApiResponse.swift in Sources */,
+				274E9F491F1F5E9E00EF0FCF /* CMNDeviceAndTokenEntity.swift in Sources */,
 				279DBC391F0B87C400D37E60 /* CMNBaseResponse.swift in Sources */,
 				27A19A721F03BBDC000595D6 /* ViewController.swift in Sources */,
+				274E9F401F1CB7DE00EF0FCF /* APIUserDeviceRegisterRequest.swift in Sources */,
 				279DBC371F0B87B500D37E60 /* CMNBaseRequest.swift in Sources */,
 				279DBC3F1F0B9ED500D37E60 /* APIUserLoginResponse.swift in Sources */,
 				279DBC501F0DD54C00D37E60 /* CMNUserEntity.swift in Sources */,
 				279DBC3D1F0B9E5700D37E60 /* APIUserLoginRquest.swift in Sources */,
+				274E9F421F1DF28C00EF0FCF /* CMNTokenEntity.swift in Sources */,
+				274E9F451F1DF31000EF0FCF /* CMNUserCacheManager.swift in Sources */,
 				279DBC471F0CD42600D37E60 /* CMNUserBiz.swift in Sources */,
 				2782E81C1F063189003B8184 /* CMNBaseTableCell.swift in Sources */,
 				2782E8181F060272003B8184 /* CMNBaseCellItem.swift in Sources */,
 				2782E8321F0A2FF8003B8184 /* CMNTextFieldCell.swift in Sources */,
 				279DBC4C1F0D035300D37E60 /* RxMoyaProvider+EXT.swift in Sources */,
+				274E9F3E1F1CB74F00EF0FCF /* CMNDeviceEntity.swift in Sources */,
 				279DBC331F0B876100D37E60 /* CMNBaseTableViewController.swift in Sources */,
 				279DBC4E1F0DD50D00D37E60 /* CMNBaseEntity.swift in Sources */,
 				27A19A701F03BBDC000595D6 /* AppDelegate.swift in Sources */,
+				274E9F471F1F4DA100EF0FCF /* APIRenewTokenRequest.swift in Sources */,
 				279DBC451F0CD3FE00D37E60 /* CMNBaseBiz.swift in Sources */,
 				279DBC341F0B876100D37E60 /* CMNBaseViewController.swift in Sources */,
 				279DBC491F0CF5B300D37E60 /* CMNAPITarget.swift in Sources */,

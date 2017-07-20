@@ -11,13 +11,16 @@ import Moya
 import RxSwift
 
 protocol CMNRxMoyaProviderDelegate {
-    func tokenExprise(_ requests:[CMNBaseRequestType], _ callback: @escaping (_ result: Bool, _ error: NSError?) -> Void) -> Void;
+    func preparationOfScheduleForRequests(_ requests: [CMNBaseRequestType]) -> Observable<CMNDeviceAndTokenEntity>;
 }
 
 class CMNRxMoyaProvider: RxMoyaProvider<CMNAPITarget> {
-    var deviceId: String?;
-    var appId: String?;
-    var userId: String?;
+    var deviceId: NSInteger?;
+    var deviceToken: String?;
+    var userId: NSInteger?;
+    var userToken: String?;
+    var appId: String = "4";
+    
     var delegate: CMNRxMoyaProviderDelegate?;
     
     func request<E, R>(_ request: R, entity: E) -> Observable<CMNBaseEntityType> where E: CMNBaseEntityType, R: CMNBaseRequest {
@@ -29,39 +32,44 @@ class CMNRxMoyaProvider: RxMoyaProvider<CMNAPITarget> {
     func requests<E, R>(_ requests: [R], entities: [E]) -> Observable<[CMNBaseEntityType]> where E: CMNBaseEntityType, R: CMNBaseRequest  {
 
         return Observable.create { observer in
-            let params = self.renderParameters(requests: requests);
-            
             var cancellableToken: Cancellable?;
             // 调用前验证token
-            self.delegate?.tokenExprise(requests, { (success, error) in
-                if error == nil {
-                    cancellableToken = self.request(CMNAPITarget(params)) { result in
-                        switch result {
-                        case let .success(response):
-                            //                    observer.onNext(E)
-                            let result = String.init(data: response.data, encoding: .utf8);
-                            NSLog("api result; %@", result!);
-                            
-//                            var json = result.toJSONValue();
-//                             JSONDeserializer<T>.deserializeFrom(json: jsonString)!
-                            let object: NSDictionary = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as! NSDictionary;
-                            
-                            let content: NSArray = object.object(forKey: "content") as! NSArray;
-                            
-                            // todo 返回值解析
-                            
-                            observer.onCompleted()
-                        case let .failure(error):
-                            observer.onError(error)
-                        }
+            
+            let preparationDisposable: Disposable? = self.delegate? .preparationOfScheduleForRequests(requests).subscribe(onNext: { (deviceAndToken) in
+                self.deviceId = deviceAndToken.device?.deviceId;
+                self.userId = deviceAndToken.token?.userId;
+                self.deviceToken = deviceAndToken.device?.deviceToken;
+                self.userToken = deviceAndToken.token?.token;
+                
+                let params = self.renderParameters(requests: requests);
+
+                cancellableToken = self.request(CMNAPITarget(params)) { result in
+                    switch result {
+                    case let .success(response):
+                        //                    observer.onNext(E)
+                        let result = String.init(data: response.data, encoding: .utf8);
+                        NSLog("api result; %@", result!);
+                        
+                        //                            var json = result.toJSONValue();
+                        //                             JSONDeserializer<T>.deserializeFrom(json: jsonString)!
+                        let object: NSDictionary = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as! NSDictionary;
+                        
+                        let content: NSArray = object.object(forKey: "content") as! NSArray;
+                        
+                        // todo 返回值解析
+                        
+                        observer.onCompleted()
+                    case let .failure(error):
+                        observer.onError(error)
                     }
-                } else {
-                    observer.onError(error!)
                 }
+            }, onError: { (error) in
+                observer.onError(error)
             });
             
             return Disposables.create {
-                cancellableToken?.cancel()
+                cancellableToken?.cancel();
+                preparationDisposable?.dispose();
             }
         }
     }
@@ -111,18 +119,36 @@ fileprivate extension CMNRxMoyaProvider {
         //    [params setObject:@"json" forKey:kFormat];
         
         if (self.deviceId != nil) {
-            parameters[CMNAPIParamConstant.DEVICE_ID] = self.deviceId;
+            parameters[CMNAPIParamConstant.DEVICE_ID] = String(format: "%li", self.deviceId!);
         }
-        
-        if (self.appId != nil) {
-            parameters[CMNAPIParamConstant.APPLICATION_ID] = self.appId;
-        }
+
+        parameters[CMNAPIParamConstant.APPLICATION_ID] = self.appId;
         
         if (self.userId != nil) {
-            parameters[CMNAPIParamConstant.USER_ID] = self.userId;
+            parameters[CMNAPIParamConstant.USER_ID] = String(format: "%li", self.userId!);
+        }
+        
+        if (self.userToken == nil && securityType != ServerTrustPolicy.None) {
+            
+            if self.deviceToken != nil {
+                parameters[CMNAPIParamConstant.DEVICE_TOKEN] = self.deviceToken;
+            }
+        }
+        
+        if self.userToken != nil {
+            parameters[CMNAPIParamConstant.TOKEN] = self.userToken;
         }
         
         return parameters;
+    }
+    
+    func signRequest(params: [String: String]) -> String {
+        
+        let paramsKey: [String] = params.keys.sorted { (value1, value2) -> Bool in
+            return value1.compare(value2, options: String.CompareOptions.literal);
+        };
+        
+        return "";
     }
 }
 
@@ -138,6 +164,7 @@ fileprivate class CMNAPIParamConstant {
     static let USER_ID: String = "_uid";
     static let VERSION_CODE: String = "_vc";
     static let VERSION_NAME: String = "_vn";
+    static let DEVICE_TOKEN: String = "_dtk";
 }
 
 //- (NSString *) parameterStringWithRequests:(NSArray *)requests
